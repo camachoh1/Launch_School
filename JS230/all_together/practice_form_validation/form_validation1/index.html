@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="app.js"></script>
+  <title>Form Layouts</title>
+</head>
+<body>
+  <h2>Sign Up Form</h2>
+  <form action="" method="post" novalidate="true">
+    <fieldset>
+      <dl>
+        <dt>
+          <label for="first-name">First Name</label>
+        </dt>
+        <dd>
+          <input type="text" name="first-name" id="first-name" required="true">
+        </dd>
+      </dl>
+  
+      <dl>
+        <dt>
+          <label for="last-name">Last Name</label>
+        </dt>
+        <dd>
+          <input type="text" name="last-name" id="last-name" minlength="1">
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <label for="email">Email</label>
+        </dt>
+        <dd>
+          <input type="text" name="email" id="email" placeholder="email@email.com" pattern="/.+@.+/">
+        </dd>
+      </dl><!--
+      --><dl class="password">
+        <dt>
+          <label for="password">Password</label>
+        </dt>
+        <dd>
+          <input type="password" name="password" id="password" minlength="10">
+        </dd>
+      </dl><!--
+      --><dl>
+        <dt>
+          <label for="phone-number">Phone Number</label>
+        </dt>
+        <dd>
+          <input type="tel" name="phone-number" id="phone-number" placeholder="123-456-7890" pattern="/\d{3}-\d{3}-\d{4}/">
+        </dd>
+      </dl>
+      <button>Sign Up</button>
+    </fieldset>
+    
+  </form>
+</body>
+</html>

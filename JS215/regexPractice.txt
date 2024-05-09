@@ -1,0 +1,70 @@
+write a regex that matches the following phone numbers and captures the area codes:
+
+capture 	415-555-1234 	
+capture 	650-555-2345 	 	
+capture 	(416)555-3456 	 	
+capture 	202 555 4567 	 	
+capture 	4035555678 	 	
+capture 	1 416 555 9292
+
+answer: 1?[\s-]?\(?(\d{3})\)?[\s-]?\d{3}[\s-]?\d{4}
+
+
+write a regex that matches the following numbers:
+
+match 	3.14529 	
+match 	-255.34 	
+match 	128 	
+match 	1.9e10 	
+match 	123,340.00
+skip 	  720p
+
+answer: ^(-?\d+(,|\.)\d+e?\.?\d+)|\d+$
+
+write a regex that captures the names while ignoring the filter characters (+ and afterwards) and domain (@ and afterwards):
+
+capture 	tom@hogwarts.com 	                tom
+capture 	tom.riddle@hogwarts.com 	        tom.riddle
+capture 	tom.riddle+regexone@hogwarts.com 	tom.riddle
+capture 	tom@hogwarts.eu.com 	            tom
+capture 	potter@hogwarts.com 	            potter
+capture 	harry@hogwarts.com 	              harry
+capture 	hermione+regexone@hogwarts.com    hermione
+
+answer: ^([a-z]+\.?[a-z]+) 
+captures lowercase alphabetic characters followed by an optional period and more lowercase letters
+
+or simply: ^([\w\.]*) 
+captures and matches emails starting with alphanumeric characters including the period. It will match up to the point in the text where there are no more alphanumeric characters making it reach exactly up to the + and @
+
+
+capture the following image files:
+                                  capture groups
+skip 	    .bash_profile 		
+skip 	    workspace.doc 
+
+capture 	img0912.jpg 	          img0912 jpg 	  
+capture 	updated_img0912.png 	  updated_img0912 png 	
+
+skip 	documentation.html 
+
+capture 	favicon.gif 	          favicon gif 
+
+skip 	img0912.jpg.tmp 		  
+skip 	access.lock
+
+answer: (updated_img0912|img0912|favicon)\.(jpg|png|gif)$
+
+alternative: (\w+)\.(jpg|png|gif)$
+
+
+write a simple regular expression to capture the content of each line, without the extra whitespace:
+
+
+Task 	          Text 	                    Capture Groups 	 
+capture 				The quick brown fox... 	  The quick brown fox...
+capture 	      jumps over the lazy dog. 	jumps over the lazy dog.
+
+answer: ^\s*(.*)\s*$
+
+skips all the starting and ending whitespaces and only captures the content in the middle.

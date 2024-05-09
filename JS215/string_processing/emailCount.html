@@ -1,0 +1,44 @@
+<script src="emailData.txt"></script>
+<script>
+  function mailCount(emailData) {
+    let emails = emailData.split('##||##');
+    let datePart = emails.flatMap(email => email.split('#/#')[2]);
+    
+    let sortedDates = datePart.flatMap(date => date.match(/\d\d-\d\d-\d\d\d\d/)).flat().sort();
+
+    console.log(`Count of Email: ${emails.length}`);
+    console.log(`Date Range: ${formatDate(sortedDates[0])} - ${formatDate(sortedDates[sortedDates.length - 1])}`);
+    
+  }
+  function formatDate(date) {
+    let dateNums = date.split('-');
+    let month = parseInt(dateNums[0], 10) - 1;
+    let day = parseInt(dateNums[1], 10);
+    let year = parseInt(dateNums[2], 10);
+    return new Date(year, month, day).toDateString();
+  };
+
+mailCount(emailData);
+</script>
+
+<!-- The objective of this practice problem is to build a function that parses a string of email data. The function takes an argument that contains the data, parses it, then produces two basic statistics about the email:
+
+    The number of email messages found in the string
+    The date range of the email messages
+
+The email messages string has the following characteristics:
+
+    The string contains multiple email messages separated by the delimiter string ##||##.
+
+    Each email message has five parts. The delimiter string #/# separates the parts.
+
+    The five parts are:
+        Sender
+        Subject
+        Date
+        Recipient
+        Body
+
+    All five parts occur in the sequence shown above. -->
+
+

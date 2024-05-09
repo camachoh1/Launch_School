@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise5</title>
+  <style>
+    dl {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px; 
+    }
+    dt {
+      margin-right: 10px; 
+    }
+  </style>
+  <script src="exercise5.js"></script>
+</head>
+<body>
+  <h1>Exercise 5</h1>
+  <div>
+    <h1>Schedules</h1>
+    <form method="post" action="/api/bookings" id="book-schedule">
+      <fieldset>
+        <dl>
+          <dt><label for="schedules">Please select one schedule</label></dt>
+          <dd>
+            <select name="id" id="id">
+              <option> </option>
+            </select>
+          </dd>
+        </dl>
+        <dl>
+          <dt><label for="email">Email</label></dt>
+          <dd>
+            <input type="email" id="email" name="student_email" placeholder="enter your email" required>
+            <input type="submit" id="submit-btn">
+          </dd>
+
+        </dl>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+table {
+  border-collapse: collapse;
+  background-color: cyan;
+}
+
+table td{
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: orange;
+}

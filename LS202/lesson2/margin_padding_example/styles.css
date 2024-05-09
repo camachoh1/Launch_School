@@ -1,0 +1,24 @@
+section {
+  background-color: lightblue;
+  border: 1px solid black;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+article {
+  background-color: lightcoral;
+  border: 30px solid blueviolet;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 200px;
+  margin: 40px;
+  padding: 50px;
+  width: 200px;
+}
+
+.toggled {
+  background-color: aqua;
+  border: 30px solid greenyellow;
+}

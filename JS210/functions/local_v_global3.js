@@ -1,0 +1,8 @@
+var myVar = 'this is global';
+
+function someFunction() {
+  myVar = 'This is local';
+}
+
+someFunction();
+console.log(myVar);

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <style>
+    /* Apply styles to the fieldset to ensure proper spacing and layout */
+    fieldset {
+      border: none; /* Optional: removes the border around the fieldset */
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Ensure labels and input fields are displayed in a block layout */
+    label, input, button {
+      display: block; /* Make each element take the full width */
+      margin-bottom: 10px; /* Add some space between the elements */
+    }
+
+    input, button {
+      width: 100%; /* Optional: ensures inputs and button take full container width */
+      box-sizing: border-box; /* Optional: includes padding and border in the element's total width and height */
+    }
+
+    /* Style adjustments for better appearance */
+    input[type="text"] {
+      padding: 8px; /* Adds some padding inside the text boxes for better aesthetics */
+      border: 1px solid #ccc; /* Adds a border to the input fields */
+      border-radius: 4px; /* Optional: rounds the corners of the input fields */
+    }
+
+    button {
+      padding: 10px;
+      background-color: #007bff; /* Example button color */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3; /* Darker shade for hover effect */
+    }
+  </style>
+</head>
+  <body>
+    <body>
+      <!-- styling the form in a top-to-bottom orientation. -->
+      <form action="#" method="post">
+        <fieldset>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Product Name">
+
+          <label for="year">Year</label>
+          <input type="text" name="year" id="year"
+          placeholder="Enter year">
+
+          <label for="price">Price</label>
+          <input type="text" name="price" id="price"
+                  placeholder="$99.99">
+
+          <label for="cpu-model">CPU Model</label>
+          <input type="text" name="CPU model" id="cpu-model" placeholder="Intel Core">
+
+          <label for="hd-size">HD Size</label>
+          <input type="text" name="Hard disk size" id="hd-size" placeholder="1 TB">
+          <button id="submit-btn">Submit</button>
+        </fieldset>
+      </form>
+  </body>
+</html>

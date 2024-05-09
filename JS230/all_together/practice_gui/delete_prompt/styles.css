@@ -1,0 +1,64 @@
+body {
+  background: #226543;
+  padding: 20px;
+  color: #000;
+  font-size: 18px;
+}
+
+h2 {
+  color: #fff;
+}
+
+#todos {
+  list-style: none;
+  width: 600px;
+}
+
+#todos li {
+  padding: 16px 20px 0 20px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #222;
+  height: 50px;
+  margin-bottom: 20px;
+  text-indent: 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+}
+.overlay-content {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: 40px;
+  text-align: center; 
+}
+
+.context-menu  {
+  display: none;
+  text-decoration: none;
+  position:absolute;
+  color: rgb(255, 247, 247);
+  top: 0;
+  left: 0;
+  min-width: 220px;
+  background-color: rgb(0, 0, 0);
+  border-width: 15px;
+  border-radius: 5px;
+  border-color: red;
+  padding: 50px 0;
+}
+
+.option {
+  border-radius: 20px;
+  border-color: white;
+}

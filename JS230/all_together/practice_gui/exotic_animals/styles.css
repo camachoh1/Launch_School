@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #37187c;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+}
+#gallery img {
+  width: 100%;
+  height: auto;
+  border: 3px solid #00bae9;
+}
+
+figcaption {
+  display: none;
+  position: absolute;
+  background-color: #000C;
+  color: aqua;
+  width: 360px;
+  transition: opacity 300ms ease-in-out;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+}
+
+.hidden {
+  display: block;
+  opacity: 0;
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+}
+
+/* .tooltip {
+  opacity: 0;
+  transition: opacity 0.3 ease;
+}
+
+.display {
+  opacity: 100%;
+} */

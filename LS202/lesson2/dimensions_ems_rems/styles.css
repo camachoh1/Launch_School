@@ -1,0 +1,9 @@
+html, body { font-size: 24px; }
+
+.a-em { font-size: 1em; }
+.b-em { font-size: 1.5em; }
+.c-em { font-size: 2em; }
+
+.a-rem { font-size: 1rem; }
+.b-rem { font-size: 1.5rem; }
+.c-rem { font-size: 2rem; }
